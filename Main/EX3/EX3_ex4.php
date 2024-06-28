@@ -9,7 +9,7 @@ $num = rand(10, 30);
 
 echo countNum($num, $jump);
 
-function countNum($num, $jump) {  
+function countNum(int $num,int $jump) {  
     $answer = "";
     $a = 1;
         for ($i = 0; $i < $num; $i = $i + $jump) {

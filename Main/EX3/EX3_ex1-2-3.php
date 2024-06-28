@@ -7,7 +7,9 @@ $surname= "del Arco";
 $double= 3.5;
 $bool = false;
 
-const NOM = "ALBERT";
+$name = "ALBERT";
+
+define('NOM', "ALBERT");
 
 
 echo "<h1>". NOM . "</h1>" ;
@@ -61,7 +63,7 @@ $operands = array('+', '-', '*', '/');
 $op = $operands[rand(0, count($operands) -1)];
 echo calculadora(10, 12, $op);
 
-function calculadora ($x, $y, $operand){
+function calculadora (int $x, int $y,string $operand): float{
     $result = 0;
     if ($operand== '+') {
         $result = $x + $y;
