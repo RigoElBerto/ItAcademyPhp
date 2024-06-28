@@ -17,7 +17,7 @@ if (check_word($words, $char)) {
 function check_word($words, $char): bool {
     $check = true;
     for ($i = 0; $i < count($words) && $check; $i++){
-        if (strpos($words[$i], $char) == false){
+        if (strpos($words[$i], $char) == false){ //strpos --> demana un string i un char i et retorna en quina pose està aquell char dins el string, o false si no hi es
             $check = false;
         }
 
