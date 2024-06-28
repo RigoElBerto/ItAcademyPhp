@@ -9,7 +9,7 @@ if (isBitten()){
 
 
 //function that returns true or false with a 50% of chance 
-function isBitten(){
+function isBitten(): bool{
     $bites = false;
     $num = rand(1,2);
     if($num == 1){

@@ -3,7 +3,7 @@ $note = rand(0,100);
 
 echo calcNote($note);
 
-function calcNote(int $note){
+function calcNote(int $note): string{
 $ans = "";
     if($note <33){
         $ans = "L'alumne ha obtingut un " . $note . "%, i per tant reprovarà.";
