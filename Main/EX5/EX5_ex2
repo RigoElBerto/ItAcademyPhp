@@ -1,0 +1,31 @@
+<?php
+
+
+class Shape{
+private $altura ;
+private $amplada;
+
+public function __construct($altura,$amplada){
+    $this->altura = $altura;
+
+    $this->amplada = $amplada;
+}
+
+public function calculateArea(){
+    return $this->altura * $this->amplada;
+}
+
+}
+
+class Triangle extends Shape{
+    public function calculateArea(){
+        return parent:: calculateArea() / 2;
+    }
+}
+
+class Rectangle extends Shape{
+    public function calculateArea(){
+        return parent:: calculateArea();
+    }
+    
+}
