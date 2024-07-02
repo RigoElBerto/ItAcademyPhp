@@ -8,7 +8,7 @@ $_SESSION ["edad"]= $edad;
 //not required in the exercice, but I wanted to test :P
 function ValidateEmail($email) {
     $validation = false;
-    //This code checks if user's mail entry matches with a mail structure (xxxxx@xxxx.xxx)
+    //This code checks if user's mail entry matches with a mail structure (xxxxx...@xxxx.xxx)
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $validation = true;
     } else {
