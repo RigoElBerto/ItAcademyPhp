@@ -1,10 +1,10 @@
 <?php
 
-$num = 300;
+$num = 20443;
 $array;
 
 calculateErastotenes($num);
-function calculateErastotenes(int $num): string{
+function calculateErastotenes(int $num){
     for ($i = 2; $i <= $num; $i++) {
 
         $array[]=$i;
@@ -18,11 +18,14 @@ function calculateErastotenes(int $num): string{
         for ($j = $i + 1; $j < count($array); $j++) {
             if ($array[$j] % $array[$i] == 0){
                 unset($array[$j]);
-                $array = array_values($array);
             }
-            
+            $array = array_values($array);
+
         }
     }
-    return $array;
+    //return $array;
+    foreach ($array as $x) {
+        echo $x . ", ";
+    }
 }
 
