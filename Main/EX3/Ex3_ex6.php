@@ -13,12 +13,11 @@ function isBitten(): bool{
     $bites = false;
     $num = rand(1,2);
     if($num == 1){
-        $bites = true;
+        return true;
     } 
 
     else {  
-        $bites = false;
+        return false;
      }
 
-        return $bites;
 }

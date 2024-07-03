@@ -2,9 +2,10 @@
 
 $words = array("Hodor", "Kahoot", "Hombres");
 
-$chars = ['a','h', 'o', 'e'];
+/*$chars = ['a','h', 'o', 'e'];
 $char = $chars[rand(0, count($chars) -1)];
-
+*/
+$char = "h";
 print_r($words);
 
 if (check_word($words, $char)) {
