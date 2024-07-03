@@ -61,9 +61,9 @@ echo $x * $y * $n * $m . "<br>";
 
 $operands = array('+', '-', '*', '/');
 $op = $operands[rand(0, count($operands) -1)];
-echo calculadora(10, 12, $op);
+echo calcular(10, 12, $op);
 
-function calculadora (int $x, int $y,string $operand): float{
+function calcular (int $x, int $y,string $operand): float{
     $result = 0;
     if ($operand== '+') {
         $result = $x + $y;
