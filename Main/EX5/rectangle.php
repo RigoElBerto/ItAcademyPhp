@@ -1,6 +1,6 @@
 <?php
 namespace shape;
-require_once 'EX5_ex2.php';
+require_once 'shape.php';
 class Rectangle extends Shape{
     public function calculateArea():float{
         return $this->getAltura() * $this->getAmplada();

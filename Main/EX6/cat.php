@@ -1,5 +1,5 @@
 <?php
-namespace mammals;
+namespace animals;
 
 require_once 'animal.php';
 

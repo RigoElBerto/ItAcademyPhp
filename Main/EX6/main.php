@@ -1,6 +1,6 @@
 <?php
-use mammals\Cat;
-use mammals\Dog;
+use animals\Cat;
+use animals\Dog;
 
 require_once 'cat.php';
 require_once 'dog.php';

@@ -1,5 +1,5 @@
 <?php
-namespace mammals;
+namespace animals;
 
 abstract class Animal{
 private $nom;
