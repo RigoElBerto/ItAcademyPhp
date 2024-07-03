@@ -2,7 +2,6 @@
 
 $num = 300;
 $array;
-$numPrim;
 
 calculateErastotenes($num);
 function calculateErastotenes(int $num): string{
