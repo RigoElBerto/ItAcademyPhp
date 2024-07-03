@@ -1,7 +1,11 @@
 <?php
 
-require 'EX5_ex1';
-require 'EX5_ex2';
+use shape\Rectangle;
+use shape\Triangle;
+
+require 'EX5_ex1.php';
+include_once 'rectangle.php';
+include_once 'triangle.php';
 
 
 $empleado = new Employee("Albert", 5000);
