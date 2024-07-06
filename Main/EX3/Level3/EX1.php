@@ -1,7 +1,7 @@
 <?php
 
-$num = 20443;
-$array;
+$num = 10000;
+$array = [];
 
 calculateErastotenes($num);
 function calculateErastotenes(int $num){
@@ -22,7 +22,9 @@ function calculateErastotenes(int $num){
             $array = array_values($array);
 
         }
+
     }
+
     //return $array;
     foreach ($array as $x) {
         echo $x . ", ";

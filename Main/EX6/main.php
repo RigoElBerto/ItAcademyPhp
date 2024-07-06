@@ -1,9 +1,8 @@
 <?php
-use animals\Cat;
-use animals\Dog;
 
-require_once 'cat.php';
-require_once 'dog.php';
+require 'animal.php';
+require 'cat.php';
+require 'dog.php';
 
 
 $dogo = new Dog("Snoopy");

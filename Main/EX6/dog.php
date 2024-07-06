@@ -1,7 +1,4 @@
 <?php
-namespace animals;
-
-require_once 'animal.php';
 
 class Dog extends Animal{
 
