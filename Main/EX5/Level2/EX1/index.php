@@ -20,12 +20,12 @@ echo "<br>" . $dice1->shapeName();
 echo "<br>" . getTotalThrows();
 
 function ThrowDices($arrayDice): array{
-$arrayResults = array();
-foreach($arrayDice as $Dice){
-    $arrayResults[]= $Dice->Throw();
-}
-countTotalThrows();
-return $arrayResults;
+    $arrayResults = array();
+    foreach($arrayDice as $Dice){
+        $arrayResults[]= $Dice->Throw();
+    }
+    countTotalThrows();
+    return $arrayResults;
 }
 
 function countTotalThrows(){

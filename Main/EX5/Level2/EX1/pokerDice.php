@@ -4,10 +4,6 @@ class PokerDice {
     private $lastFigure = "";
     static $counter = 0;
 
-    public function getFigure(){
-        return $this->figure;
-    }
-
     public function Throw(){
         $num = rand(0, count($this->figure) -1);
         $this->lastFigure = $this->figure[$num];

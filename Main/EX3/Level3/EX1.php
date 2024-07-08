@@ -4,6 +4,8 @@ $num = 10000;
 $array = [];
 
 calculateErastotenes($num);
+
+//es podria fer amb un range, que demana per parametres valor inicial i final i ja et crea l'array
 function calculateErastotenes(int $num){
     for ($i = 2; $i <= $num; $i++) {
 
