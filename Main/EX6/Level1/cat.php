@@ -3,7 +3,7 @@
 
 class Cat extends Animal{
 
-    public function MakeSound(){
+    public function MakeSound(): string{
         return "Marrameu Torracastanyes";
     }
 }

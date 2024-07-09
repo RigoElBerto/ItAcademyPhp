@@ -1,28 +1,23 @@
 <?php
 
 require 'pokerDice.php';
-    
+$arrayDice = [];   
 
-$dice1 = new PokerDice();
-$dice2 = new PokerDice();
-$dice3 = new PokerDice();
-$dice4 = new PokerDice();
-$dice5 = new PokerDice();
-
-
-$arrayDice = array($dice1, $dice2, $dice3, $dice4, $dice5);
+for ($i = 0; $i < 5; $i++) {
+   $arrayDice[$i] = new PokerDice();
+}
 
 ThrowDices($arrayDice);
-echo $dice1->shapeName() . "<br>";
+echo $arrayDice[0]->shapeName() . "<br>";
 print_r (ThrowDices($arrayDice));
-echo "<br>" . $dice1->shapeName();
-
+echo "<br>" . $arrayDice[0]->shapeName();
 echo "<br>" . getTotalThrows();
 
 function ThrowDices($arrayDice): array{
     $arrayResults = array();
     foreach($arrayDice as $Dice){
-        $arrayResults[]= $Dice->Throw();
+        $Dice->Throw();
+        $arrayResults[]= $Dice->shapeName();
     }
     countTotalThrows();
     return $arrayResults;

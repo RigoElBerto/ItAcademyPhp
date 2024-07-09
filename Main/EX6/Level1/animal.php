@@ -10,7 +10,6 @@ public function __construct($nom){
 public function getNom(){
     return $this->nom;
 }
-public function MakeSound(){
+abstract public function MakeSound(): string;
 
-}
 }

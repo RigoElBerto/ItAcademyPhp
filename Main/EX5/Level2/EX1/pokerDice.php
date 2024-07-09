@@ -7,7 +7,6 @@ class PokerDice {
     public function Throw(){
         $num = rand(0, count($this->figure) -1);
         $this->lastFigure = $this->figure[$num];
-        return $this->lastFigure;
     }
 
     public function shapeName(){

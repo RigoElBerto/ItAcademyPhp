@@ -2,7 +2,7 @@
 
 class Dog extends Animal{
 
-public function MakeSound(){
+public function MakeSound(): string{
     return "Bup Bup";
 }
 }

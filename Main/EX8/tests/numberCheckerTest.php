@@ -3,23 +3,30 @@ use PHPUnit\Framework\TestCase;
 
 final class numberCheckerTest extends TestCase
 {
-   
+    private $checker1;
+    private $checker2;
+
+   function setUp(): void
+   {
+    $this -> checker1 = new numberChecker(15);
+    $this -> checker2 = new numberChecker(-16);
+   }
 
     public function testClassisEven(){
-        $num = new NumberChecker(15);
-        $num2 = new NumberChecker(16);
-        $this -> assertIsBool($num->isEven());
-        $this ->assertFalse($num->isEven());
-        $this ->assertTrue($num2->isEven());
+        $this -> assertIsBool($this->checker1->isEven());
+        $this ->assertFalse($this->checker1->isEven());
+    }
+
+    public function testClassisOdd(){
+        $this ->assertTrue($this->checker2->isEven());
     }
 
     public function testClassisPositive(){
-        $num = new NumberChecker(0);
-        $num2 = new NumberChecker(15);
-        $this -> assertIsBool($num->isPositive());
-        $this ->assertFalse($num->isPositive());
-        $this ->assertTrue($num2->isPositive());
+        $this -> assertIsBool($this->checker1->isPositive());
+        $this ->assertFalse($this->checker1->isPositive());
+    }
 
-
+    public function testClassisNegative(){
+        $this ->assertTrue($this->checker2->isPositive());
     }
 }

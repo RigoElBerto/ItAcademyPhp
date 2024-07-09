@@ -23,6 +23,3 @@ abstract public function calculateArea(): float;
 
 
 }
-
-
-
