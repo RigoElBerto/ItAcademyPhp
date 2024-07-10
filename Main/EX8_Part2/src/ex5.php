@@ -12,6 +12,10 @@ class Ex5{
         return $this->note;
     }
 
+    public function setNote($note){
+        $this->note = $note;
+    }
+
     function calcNote(): string{
     $ans = "";
         if($this->note <33){

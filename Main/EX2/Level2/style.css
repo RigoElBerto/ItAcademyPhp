@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+a:link, a:visited {
+    color: gray;
+    background-color: transparent;
+    text-decoration: none;
+   
+}
+
+a:hover{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    
+}

@@ -1,14 +1,9 @@
 <?php
 include_once("shape.php");
+include_once("RegularShape.php");
 
-class rectangle implements Shape{
-    private $base;
-    private $altura;
 
-    public function __construct($base, $altura){
-        $this->base = $base;
-        $this->altura = $altura;
-    }
+class rectangle extends RegularShape implements Shape{
 
     public function calculateArea(){
         return $this-> base * $this->altura;

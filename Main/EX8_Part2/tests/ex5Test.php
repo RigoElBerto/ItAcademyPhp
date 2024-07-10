@@ -3,29 +3,35 @@ use PHPUnit\Framework\TestCase;
 
 final class ex5Test extends TestCase{
 
-private $test1;
-private $test2;
-private $test3;
-private $test4;
+private $test;    
 
 function setUp() : void{
-    $this->test1 = new Ex5(45);
-    $this->test2 = new Ex5(44);
-    $this->test3 = new Ex5(20);
-    $this->test4 = new Ex5(80);
+    $this->test = new Ex5(45);
+   
 }
 
 public function testClassConstructor(){
-$this->assertSame(44, $this->test2->getNote());
+$this->assertSame(45, $this->test->getNote());
 
 }
 
-public function testcalcNote(){
-    $this->assertSame($this->test1->calcNote(), "L'alumne ha obtingut un ". $this->test1->getNote() . "%. Anirà a Segona Divisió.");
-    $this->assertSame($this->test2->calcNote(), "L'alumne ha obtingut un ". $this->test2->getNote() . "%. Anirà a Tercera Divisió.");
-    $this->assertSame($this->test3->calcNote(), "L'alumne ha obtingut un " . $this->test3->getNote() . "%, i per tant reprovarà.");
-    $this->assertSame($this->test4->calcNote(), "L'alumne ha obtingut un ". $this->test4->getNote() . "%. Anirà a Primera Divisió.");
-
+public function testReprovar(){
+    $this->test->setNote(20);
+    $this->assertSame($this->test->calcNote(), "L'alumne ha obtingut un " . $this->test->getNote() . "%, i per tant reprovarà.");
 }
 
+public function testTerDivisio() {
+    $this->test->setNote(44);
+    $this->assertSame($this->test->calcNote(), "L'alumne ha obtingut un ". $this->test->getNote() . "%. Anirà a Tercera Divisió.");
+}
+
+public function testSecDivsio(){
+    $this->test->setNote(45);
+    $this->assertSame($this->test->calcNote(), "L'alumne ha obtingut un ". $this->test->getNote() . "%. Anirà a Segona Divisió.");
+}
+
+public function testPrimDivisio(){
+    $this->test->setNote(80);
+    $this->assertSame($this->test->calcNote(), "L'alumne ha obtingut un ". $this->test->getNote() . "%. Anirà a Primera Divisió.");
+}
 }

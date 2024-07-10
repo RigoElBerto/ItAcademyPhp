@@ -7,7 +7,7 @@ class Car{
     private $fuelType;
     private$maxSpeed;
 
-    public function __construct($brand, $plate, $fuelType, $maxSpeed){
+    public function __construct(string $brand, string  $plate, string $fuelType, int $maxSpeed){
         $this->brand = $brand;
         $this->plate = $plate;
         $this->fuelType = $fuelType;

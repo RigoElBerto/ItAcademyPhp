@@ -1,14 +1,8 @@
 <?php
 include_once("shape.php");
+include_once("RegularShape.php");
 
-class Triangle implements Shape{
-    private $base;
-    private $altura;
-
-    public function __construct($base, $altura){
-        $this->base = $base;
-        $this->altura = $altura;
-    }
+class Triangle extends RegularShape implements Shape{
 
     public function calculateArea(){
         return $this-> base * $this->altura / 2;
