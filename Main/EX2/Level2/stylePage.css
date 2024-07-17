@@ -118,12 +118,13 @@ body{
     position: relative;
     overflow: hidden;
     object-fit: cover;
+    height: 80%;
 
 }
 
 .image-caption {
     position: absolute;
-    bottom: 1%;
+    bottom: 2%;
     left: 1%;
     color: yellow;
     padding: 5px;
