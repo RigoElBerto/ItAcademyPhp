@@ -1,41 +1,47 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 
-final class numberCheckerTest extends TestCase
+final class numberCheckerTestDP extends TestCase
 {
-    /**
-     * @dataProvider provider
-     */
-    private $checker1;
-    private $checker2;
 
-   function setUp(): void
-   {
-    $this -> checker1 = new numberChecker(15);
-    $this -> checker2 = new numberChecker(-16);
-   }
-
-    public function testClassisEven(){
-        $this -> assertIsBool($this->checker1->isEven());
-        $this ->assertFalse($this->checker1->isEven());
+    #[\PHPUnit\Framework\Attributes\DataProvider('providerEven')]
+    public function testClassisEven($number): void {
+        $checker = new NumberChecker($number);
+        $this->assertIsBool($checker->isEven());
+        $this->assertTrue($checker->isEven());
     }
 
-    public function testClassisOdd(){
-        $this ->assertTrue($this->checker2->isEven());
+    #[\PHPUnit\Framework\Attributes\DataProvider('providerOdd')]
+    public function testClassisOdd($number): void {
+        $checker = new NumberChecker($number);
+        $this->assertIsBool($checker->isEven());
+        $this->assertFalse($checker->isEven());
     }
 
-    public function testClassisPositive(){
-        $this -> assertIsBool($this->checker1->isPositive());
-        $this ->assertFalse($this->checker1->isPositive());
+    #[\PHPUnit\Framework\Attributes\DataProvider('providerEven')]
+    public function testClassisPositive($number): void {
+        $checker = new NumberChecker($number);
+        $this->assertIsBool($checker->isPositive());
+        $this->assertTrue($checker->isPositive());
     }
 
-    public function testClassisNegative(){
-        $this ->assertTrue($this->checker2->isPositive());
+    #[\PHPUnit\Framework\Attributes\DataProvider('providerOdd')]
+    public function testClassisNegative($number): void {
+        $checker = new NumberChecker($number);
+        $this->assertFalse($checker->isPositive());
     }
 
-    public function provider(){
-        return [(15),
-                (-16)];
-            
+    public static function providerEven(): array {
+        return [
+            [24],
+            [16]
+        ];
+    }
+
+    public static function providerOdd(): array {
+        return [
+            [-15],
+            [-19]
+        ];
     }
 }

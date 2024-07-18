@@ -8,8 +8,8 @@ final class numberCheckerTest extends TestCase
 
    function setUp(): void
    {
-    $this -> checker1 = new numberChecker(15);
-    $this -> checker2 = new numberChecker(-16);
+    $this -> checker1 = new NumberChecker(15);
+    $this -> checker2 = new NumberChecker(-16);
    }
 
     public function testClassisEven(){
